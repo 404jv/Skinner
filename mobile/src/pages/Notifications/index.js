@@ -3,7 +3,7 @@ import { View, Text } from 'react-native';
 
 import styles from './styles';
 
-export default function Home() {
+export default function Notifications() {
   return (
     <View style={styles.container}>
       <Text>Hello, Home!.</Text>
