@@ -1,28 +1,31 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Feather, MaterialIcons, FontAwesome } from '@expo/vector-icons';
+import {  MaterialIcons, FontAwesome } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
+import HomeButton from '../HomeButton'
+
 import Home from '../../pages/Home';
-import Notification from '../../pages/Notification';
+import Communities from '../../pages/Communities';
+import Notifications from '../../pages/Notifications';
 import Chat from '../../pages/Chat';
 import Profile from '../../pages/Profile';
 
 const icons = {
-  Home: {
+  Communities: {
     lib: MaterialIcons,
-    name: 'home'
-  },
-
-  Notification: {
-    lib: MaterialIcons,
-    name: 'notifications-active'
+    name: 'people'
   },
 
   Chat: {
     lib: MaterialIcons,
     name: 'chat-bubble'
+  },
+
+  Notifications: {
+    lib: MaterialIcons,
+    name: 'notifications-active'
   },
 
   Profile: {
@@ -37,6 +40,10 @@ export default function Menu() {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarIcon: ({ color, size }) => {
+          if (route.name === 'Home') {
+            return <HomeButton />
+          }
+
           const { lib: Icon, name } = icons[route.name];
 
           return <Icon name={name} size={size} color={color} />
@@ -45,18 +52,27 @@ export default function Menu() {
 
       tabBarOptions={{
         inactiveTintColor: '#E0E0E0',
-        activeTintColor: '#FAC900',
+        activeTintColor: '#444344'
       }}
       initialRouteName='Home'
     >
+
       <Tab.Screen 
-        name='Home'
-        component={Home}
+        name='Communities'
+        component={Communities}
+      />
+      
+      <Tab.Screen
+        name='Notifications'
+        component={Notifications}
       />
 
       <Tab.Screen 
-        name='Notification'
-        component={Notification}
+        name='Home'
+        component={Home}
+        options={{
+          title: ''
+        }}
       />
 
       <Tab.Screen 
