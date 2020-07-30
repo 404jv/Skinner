@@ -9,7 +9,7 @@ import HomeButton from '../HomeButton'
 import Home from '../../pages/Home';
 import Communities from '../../pages/Communities';
 import Notifications from '../../pages/Notifications';
-import Chat from '../../pages/Chat';
+import ListChats from '../../pages/ListChats';
 import Profile from '../../pages/Profile';
 
 const icons = {
@@ -77,7 +77,7 @@ export default function Menu() {
 
       <Tab.Screen 
         name='Chat'
-        component={Chat}
+        component={ListChats}
       />
 
       <Tab.Screen 
