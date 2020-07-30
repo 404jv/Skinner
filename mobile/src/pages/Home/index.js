@@ -64,6 +64,7 @@ export default function Home() {
 
       <Text style={styles.title}>For you</Text>
       <ScrollView
+        style={{ marginBottom: 64 }}
         contentContainerStyle={{ 
           alignItems: 'center',
         }}
