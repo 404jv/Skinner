@@ -56,5 +56,50 @@ export default StyleSheet.create({
 
   live: {
     marginLeft: 8,
-  }
+  },
+
+  doctor: {
+    width: '95%',
+    height: 140,
+    backgroundColor: '#FFF',
+    borderRadius: 10,
+    padding: 8,
+    justifyContent: 'space-between',
+    marginBottom: 16
+  },
+
+  doctorInfo: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+
+  imageFeed: {
+    width: 80,
+    height: 80,
+    borderRadius: 10,
+    marginRight: 8
+  },
+
+  namefeed: {
+    fontFamily: 'Ubuntu_700Bold',
+    fontSize: 20,
+    marginBottom: 4
+  },
+
+  textFeed: {
+    fontFamily: 'Ubuntu_400Regular',
+    color: '#444344',
+    fontSize: 16,
+    width: '37%'
+  },
+
+  button: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+
+  textButton: {
+    fontFamily: 'Ubuntu_400Regular',
+  },
 });
