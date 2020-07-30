@@ -4,17 +4,21 @@ import { AppLoading } from 'expo'
 import {
   useFonts,
   Ubuntu_400Regular,
-  Ubuntu_700Bold
+  Ubuntu_700Bold,
+  Ubuntu_500Medium
 } from '@expo-google-fonts/ubuntu'
 import { Feather as Icon } from '@expo/vector-icons';
 
 import styles from './styles';
+
+import Header from '../../components/Header';
 
 export default function Home() {
 
   const [fontsLoaded] = useFonts({
     Ubuntu_400Regular,
     Ubuntu_700Bold,
+    Ubuntu_500Medium,
   });
 
   if (!fontsLoaded)
@@ -22,14 +26,8 @@ export default function Home() {
 
   return (
     <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
-      <View style={styles.header}>
-        <View style={{ flexDirection: 'row' }}>
-          <Text style={styles.textHeader}>Hi, </Text>
-          <Text style={[styles.textHeader, { color: '#FAC900' }]}>João</Text>
-        </View>
-
-        <Text>Logo</Text>
-      </View>
+      
+      <Header />
       
       <View>
         <Text style={styles.title}>Live</Text>
@@ -67,7 +65,7 @@ export default function Home() {
       <Text style={styles.title}>For you</Text>
       <ScrollView
         contentContainerStyle={{ 
-          alignItems: 'center'
+          alignItems: 'center',
         }}
       > 
         <View style={styles.doctor}>

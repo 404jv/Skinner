@@ -5,6 +5,7 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: Constants.statusBarHeight + 8,
+    backgroundColor: '#FFF'
   },
 
   header: {
@@ -65,7 +66,17 @@ export default StyleSheet.create({
     borderRadius: 10,
     padding: 8,
     justifyContent: 'space-between',
-    marginBottom: 16
+    marginBottom: 16,
+    
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.23,
+    shadowRadius: 2.62,
+    
+    elevation: 4,
   },
 
   doctorInfo: {
@@ -97,6 +108,7 @@ export default StyleSheet.create({
   button: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center'
   },
 
   textButton: {
