@@ -1,9 +1,7 @@
-const { Router } = require('express');
-
-const routes = Router();
-
 module.exports = (dependencies) => {
   const { io } = dependencies;
+
+  let messages = [];
 
   io.on('connection', (socket) => {
     if (socket.handshake.query.match) {
@@ -11,16 +9,15 @@ module.exports = (dependencies) => {
       socket.join(`match ${socket.handshake.query.match}`);
     } else {
       console.log('a new client connected');
+
+      socket.on('groupMessage', (data) => {
+        messages.push(data);
+        socket.broadcast.emit('receivedGroupMessage', data);
+      });
     }
   });
 
-  routes.get('/user', (req, res) => {
-    res.send('ok');
-  });
+  // single messages
 
-  return routes;
+  return io;
 };
-
-// routes.post('/user', usersController.create);
-// routes.get('/users', usersController.index);
-// routes.get('/users/:id', usersController.filter);
