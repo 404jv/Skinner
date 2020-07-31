@@ -4,9 +4,9 @@ import Constants from 'expo-constants';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFF',
     paddingTop: Constants.statusBarHeight + 8,
-    alignItems: 'center'
+    backgroundColor: '#FFF',
+
   },
 
   header: {
@@ -17,47 +17,17 @@ export default StyleSheet.create({
     width: 120,
     height: 120,
     borderRadius: 60,
-  },
-
-  buttonCam: {
-    width: 35,
-    height: 35,
-    backgroundColor: '#FADA00',
-    bottom: 30,
-    left: 40,
-    borderRadius: 18,
-    alignItems: 'center',
-    justifyContent: 'center',
+    margin: 4
   },
 
   name: {
-    bottom: 20,
     fontFamily: 'Ubuntu_700Bold',
     fontSize: 20,
     color: '#898988'
   },
 
-  buttonEdit: {
-    width: '90%',
-    height: 30,
-    borderRadius: 8,
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'row',
-    marginTop: 12,
-    backgroundColor: '#F5F5F5',
-
-  },
-
-  buttonText: {
-    fontFamily: 'Roboto_400Regular',
-    fontSize: 15,
-    marginRight: 8,
-    color: '#0D0D0D',
-  },
-
-  inputGroup: {
-    width: '90%'
+  doctorInfo: {
+    margin: 8
   },
 
   label: {
@@ -67,18 +37,24 @@ export default StyleSheet.create({
     color: '#0D0D0D'
   },
 
-  input:{
+  about:{
     backgroundColor: '#F5F5F5',
     borderRadius: 8,
     justifyContent: 'center',
-    paddingLeft: 16,
     padding: 8,
+    marginBottom: 8,
   },
 
-  textInput: {
+  aboutText: {
     textAlign: 'left',
     fontFamily: 'Roboto_400Regular',
-    fontSize: 16,
+    fontSize: 15,
+  },
+
+  iconsGroup: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 
 });

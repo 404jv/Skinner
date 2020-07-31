@@ -69,7 +69,7 @@ export default StyleSheet.create({
     fontFamily: 'Roboto_400Regular',
     fontSize: 19,
     color: '#B2B2B2',
-    textAlign: 'center'
+    textAlign: 'left'
   },
 
   time: {

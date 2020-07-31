@@ -12,7 +12,7 @@ import { Feather as Icon } from '@expo/vector-icons';
 
 import styles from './styles';
 
-export default function Home() {
+export default function Profile() {
   return (
     <KeyboardAvoidingView 
       style={styles.container}
@@ -21,7 +21,7 @@ export default function Home() {
       <View style={styles.header}>
         <Image 
           style={styles.image}
-          source={{ uri: 'https://images.daznservices.com/di/library/GOAL/23/bc/neymar-psg-ligue-1_zv7n75ib8ihzjlour392nac.jpg?t=432816832&quality=100' }}        
+          source={{ uri: 'https://avatars1.githubusercontent.com/u/53544964?s=460&u=ebc4863261df782f22600061af32477136e3b39a&v=4' }}        
         />
         
         <TouchableOpacity
@@ -35,7 +35,7 @@ export default function Home() {
             style={{ margin: 5}}
           />
         </TouchableOpacity>
-        <Text style={styles.name}>Dr. Luan</Text>
+        <Text style={styles.name}>João Victor</Text>
       </View>
 
       <TouchableOpacity
@@ -54,13 +54,13 @@ export default function Home() {
         <Text style={styles.label}>About</Text>
         <View style={styles.input}>
           <Text style={styles.textInput}>
-            Formado na USP mestrado em Harvard. Trabalhando na Laboratório Irineu
+            I'm from Brazil, love games, run, movies, series, program on JS and 🐶 is better than 🐱!.
           </Text>
         </View>
 
         <Text style={styles.label}>E-mail</Text>
         <View style={styles.input}>
-          <Text style={styles.textInput}>menino7ney@bacelona.com</Text>
+          <Text style={styles.textInput}>joaovictorramalho7@gmail.com</Text>
         </View>
 
         <Text style={styles.label}>Password</Text>

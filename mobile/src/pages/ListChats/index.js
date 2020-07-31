@@ -87,72 +87,25 @@ export default function ListChats() {
             </View>
           </View>
         </TouchableOpacity>
-        
+
         <TouchableOpacity
           style={styles.contact}
-          onPress={() => handleNavigateToChat({ name: 'Eduarda', image_url: 'https://blog.unyleya.edu.br/wp-content/uploads/2017/12/saiba-como-a-educacao-ajuda-voce-a-ser-uma-pessoa-melhor.jpeg'})}
           activeOpacity={0.5}
+          onPress={() => handleNavigateToChat({ name: 'Eduarda', image_url: 'https://blog.unyleya.edu.br/wp-content/uploads/2017/12/saiba-como-a-educacao-ajuda-voce-a-ser-uma-pessoa-melhor.jpeg'})}
         >
           <Image 
             style={styles.image}
-            source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Whindersson_Nunes_em_2019.png/270px-Whindersson_Nunes_em_2019.png'}}
+            source={{ uri: 'https://img.freepik.com/fotos-gratis/jovem-mulher-doutora-na-mesa_23-2147767624.jpg?size=626&ext=jpg'}}
           />
 
           <View style={styles.contactInfo}>
             <View>
-              <Text style={styles.name}>Whinderson</Text>
-              <Text style={styles.message}>Fala, Macho!</Text>
+              <Text style={styles.name}>Dr. Jhennifer</Text>
+              <Text style={styles.message}>Okay</Text>
             </View>
             
             <View>
               <Text style={styles.time}>9:30 pm</Text>
-              <Text style={styles.totMessage}>1</Text>
-            </View>
-          </View>
-        </TouchableOpacity>
-      
-        <TouchableOpacity
-          style={styles.contact}
-          onPress={() => handleNavigateToChat({ name: 'Eduarda', image_url: 'https://blog.unyleya.edu.br/wp-content/uploads/2017/12/saiba-como-a-educacao-ajuda-voce-a-ser-uma-pessoa-melhor.jpeg'})}
-          activeOpacity={0.5}
-        >
-          <Image 
-            style={styles.image}
-            source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Whindersson_Nunes_em_2019.png/270px-Whindersson_Nunes_em_2019.png'}}
-          />
-
-          <View style={styles.contactInfo}>
-            <View>
-              <Text style={styles.name}>Whinderson</Text>
-              <Text style={styles.message}>Fala, Macho!</Text>
-            </View>
-            
-            <View>
-              <Text style={styles.time}>9:30 pm</Text>
-              <Text style={styles.totMessage}>1</Text>
-            </View>
-          </View>
-        </TouchableOpacity>
-        
-        <TouchableOpacity
-          onPress={() => handleNavigateToChat({ name: 'Eduarda', image_url: 'https://blog.unyleya.edu.br/wp-content/uploads/2017/12/saiba-como-a-educacao-ajuda-voce-a-ser-uma-pessoa-melhor.jpeg'})}
-          style={styles.contact}
-          activeOpacity={0.5}
-        >
-          <Image 
-            style={styles.image}
-            source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Whindersson_Nunes_em_2019.png/270px-Whindersson_Nunes_em_2019.png'}}
-          />
-
-          <View style={styles.contactInfo}>
-            <View>
-              <Text style={styles.name}>Whinderson</Text>
-              <Text style={styles.message}>Fala, Macho!</Text>
-            </View>
-            
-            <View>
-              <Text style={styles.time}>9:30 pm</Text>
-              <Text style={styles.totMessage}>1</Text>
             </View>
           </View>
         </TouchableOpacity>

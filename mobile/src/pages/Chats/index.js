@@ -26,32 +26,16 @@ export default function Chats() {
 
     setMessages([
       {
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.In vehicula dui ac auctor scelerisque.",
+        body: "Hello, João!, Shall we schedule that video call then?",
         user: false
       },
       {
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.In vehicula dui ac auctor scelerisque.",
+        body: "Yes, set for tomorrow at 10pm",
         user: true
       },
       {
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.In vehicula dui ac auctor scelerisque.",
+        body: "Okay, see you later.",
         user: false
-      },
-      {
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.In vehicula dui ac auctor scelerisque.",
-        user: true
-      },
-      {
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.In vehicula dui ac auctor scelerisque.",
-        user: false
-      },
-      {
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.In vehicula dui ac auctor scelerisque.",
-        user: true
-      },
-      {
-        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.In vehicula dui ac auctor scelerisque.",
-        user: true
       },
     ]);
   }, []);
@@ -100,8 +84,9 @@ export default function Chats() {
         style={styles.messages}
         showsVerticalScrollIndicator={false}
       >
-          {messages.map(message => (
+          {messages.map((message, index)=> (
             <View
+              key={index}
               style={[
                 message.user ? styles.messageUser : styles.message
               ]}
