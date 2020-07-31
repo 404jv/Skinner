@@ -18,8 +18,6 @@ import {
 import { Feather as Icon } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native'
 
-import api from '../../services/api';
-
 import styles from './styles';
 
 import Header from '../../components/Header';
