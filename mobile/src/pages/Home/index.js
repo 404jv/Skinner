@@ -6,7 +6,10 @@ import {
   Ubuntu_400Regular,
   Ubuntu_700Bold,
   Ubuntu_500Medium
-} from '@expo-google-fonts/ubuntu'
+} from '@expo-google-fonts/ubuntu';
+import {
+  Roboto_400Regular
+} from '@expo-google-fonts/roboto';
 import { Feather as Icon } from '@expo/vector-icons';
 
 import styles from './styles';
@@ -19,6 +22,7 @@ export default function Home() {
     Ubuntu_400Regular,
     Ubuntu_700Bold,
     Ubuntu_500Medium,
+    Roboto_400Regular
   });
 
   if (!fontsLoaded)
