@@ -4,12 +4,11 @@ import { Text, View, StyleSheet } from 'react-native';
 export default function Header() {
   return (
     <View style={styles.header}>
-        <View style={{ flexDirection: 'row' }}>
-          <Text style={styles.textHeader}>Hi, </Text>
-          <Text style={[styles.textHeader, { color: '#FAC900' }]}>João</Text>
-        </View>
-
-        <Text>Logo</Text>
+      <View style={{ flexDirection: 'row' }}>
+        <Text style={styles.textHeader}>Hi, </Text>
+        <Text style={[styles.textHeader, { color: '#FAC900' }]}>João</Text>
+      </View>
+      <Text style={[styles.textHeader, { color: '#FAC900'}]}>Skinner</Text>
     </View>
   );
 }
