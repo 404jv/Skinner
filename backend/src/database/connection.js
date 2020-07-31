@@ -1,11 +1,35 @@
 const ibm_db = require('ibm_db');
-let connection;
 
-const connectDatabase = async () =>
-  (connection = await ibm_db.open(process.env.DB_URL));
+class Database {
+  constructor() {
+    this.connection;
+    this.connect()
+  }
 
-connectDatabase();
+  async connect() {
+    try {
+      this.connection = await ibm_db.open(process.env.DB_URL)
 
-module.exports = connection;
+      console.log('> Database : online');
 
-//   `insert into users(id, name, email, bio, image) values(1, 'Paulo', 'paulo@paulo', 'oi tudo tô feliz', 'https://google.com' )`
+      return this.connection
+    } catch (err) {
+      console.error('> Database : offline')
+      return err
+    }
+
+  }
+
+  async query(sql) {
+    try {
+      const data = await this.connection.query(sql)
+
+      return { status: 'ok', data }
+    } catch (err) {
+      return { status: 'err' }
+    }
+  }
+
+}
+
+module.exports = new Database();

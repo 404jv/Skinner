@@ -1,6 +1,7 @@
 const { Router } = require('express');
-
 const routes = Router();
+const DB = require('./database/connection')
+// const usersController = require('./controllers/usersController')
 
 module.exports = (dependencies) => {
   const { io } = dependencies;
@@ -14,9 +15,35 @@ module.exports = (dependencies) => {
     }
   });
 
-  routes.get('/user', (req, res) => {
-    res.send('ok');
+  routes.post('/user', async (req, res) => {
+    const { name, email, password, bio, image } = req.body;
+    const sql = `insert into patients(name, email, password, bio, image) values('${name}', '${email}', '${password}', '${bio}', '${image}' )`
+    const db = await DB.create(sql)
+
+    return res.send('ok')
   });
+
+  routes.post('/volunteer', async (req, res) => {
+    const { name, email, password, bio, image } = req.body;
+    const sql = `insert into volunteer(name, email, password, bio, image) values('${name}', '${email}', '${password}', '${bio}', '${image}' )`
+    const db = await DB.create(sql)
+
+    return res.send('ok')
+  });
+
+  routes.post('/psychologist', async (req, res) => {
+    const { name, email, password, bio, image } = req.body;
+    const sql = `insert into psychologist(name, email, password, bio, image) values('${name}', '${email}', '${password}', '${bio}', '${image}' )`
+    const db = await DB.create(sql)
+
+    return res.send('ok')
+  });
+
+  routes.get('/users', async (req, res) => {
+    const sql = 'select * from patients;'
+    const resp = await DB.create(sql)
+    console.log(resp)
+  })
 
   return routes;
 };
