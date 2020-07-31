@@ -22,9 +22,9 @@ class Database {
 
   async query(sql) {
     try {
-      const data = await this.connection.query(sql)
+      const result = await this.connection.query(sql)
 
-      return { status: 'ok', data }
+      return { status: 'ok', result }
     } catch (err) {
       return { status: 'err' }
     }
