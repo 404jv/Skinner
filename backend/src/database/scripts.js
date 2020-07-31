@@ -1,1 +1,0 @@
-CREATE TABLE "WMW36159".users(id TIMESTAMP(6), name VARCHAR(50), email VARCHAR(50), password VARCHAR(32), bio VARCHAR(200), image VARCHAR(200)) 
