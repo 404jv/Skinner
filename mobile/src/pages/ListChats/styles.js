@@ -66,14 +66,14 @@ export default StyleSheet.create({
   },
 
   message: {
-    fontFamily: 'Ubuntu_400Regular',
+    fontFamily: 'Roboto_400Regular',
     fontSize: 19,
     color: '#B2B2B2',
     textAlign: 'center'
   },
 
   time: {
-    fontFamily: 'Ubuntu_400Regular',
+    fontFamily: 'Roboto_400Regular',
     color: '#B2B2B2',
     fontSize: 14,
   },
