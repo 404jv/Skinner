@@ -50,6 +50,7 @@ export default StyleSheet.create({
     textAlign: 'left',
     color: '#0D0D0D',
     fontSize: 15,
+    fontFamily: 'Roboto_400Regular',
   },
 
   inputContainer: {
