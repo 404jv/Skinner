@@ -45,5 +45,5 @@ This project is under the MIT license. See the file [LICENCE]('https://github.co
 
 ---
 <div align="center">
-  Done with ❤️ a team from IBM Call For Code.
+  Done with 💛 a team from IBM Call For Code.
 </div>
